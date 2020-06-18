@@ -1,6 +1,6 @@
-export const IMAGENAME = require('./background.jpg');
+export const IMAGENAME = require('./image.gif');
 import React, { Component } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import {View, Image, StyleSheet, Text} from 'react-native';
 
 const styles = StyleSheet.create({
     stretch: {
@@ -10,13 +10,14 @@ const styles = StyleSheet.create({
     }
 });
 
-export default class DisplayAnImageWithStyle extends Component {
+export default class App extends Component {
     render() {
         return (
             <View>
+                <Text>12345</Text>
                 <Image
-                    style={styles.stretch}
-                    source={IMAGENAME}
+                    style={{width: 100, height:100 }}
+                    source={require('./image.gif')}
                 />
             </View>
         );

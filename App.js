@@ -1,37 +1,22 @@
-import React, { Component } from "react";
-import { Text, StyleSheet } from "react-native";
+import React from 'react';
+import { Text, StyleSheet } from 'react-native';
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            titleText: "Bird's Nest",
-            bodyText: "This is not really a bird nest."
-        };
-    }
-
-    render() {
-        return (
-            <Text style={styles.baseText}>
-                <Text style={styles.titleText} onPress={this.onPressTitle}>
-                    {this.state.titleText}
-                    {"\n"}
-                    {"\n"}
-                </Text>
-                <Text numberOfLines={5}>{this.state.bodyText}</Text>
-            </Text>
-        );
-    }
-}
+const BoldAndBeautiful = () => {
+    return (
+        <Text style={styles.baseText}>
+            I am bold
+            <Text style={styles.innerText}> and red</Text>
+        </Text>
+    );
+};
 
 const styles = StyleSheet.create({
     baseText: {
-        fontFamily: "Cochin"
+        fontWeight: 'bold'
     },
-    titleText: {
-        fontSize: 20,
-        fontWeight: "bold"
+    innerText: {
+        color: 'red'
     }
 });
 
-export default App;
+export default BoldAndBeautiful;
